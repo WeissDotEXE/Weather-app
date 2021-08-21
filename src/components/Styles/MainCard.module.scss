@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.mainCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $fontFamily;
+    img {
+      position: relative;
+      z-index: 10;
+      filter: brightness(100%);
+    }
+    .leftContent {
+      h1 {
+        font-size: 35px;
+        font-weight: 800;
+      }
+      .slider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .rightContent {
+      h1 {
+        background: $highlightTextColor;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }

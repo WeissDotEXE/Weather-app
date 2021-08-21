@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.slider{
+    width: 70px;
+    height: 30px;
+    background: grey;
+    border-radius: 50px;
+    position: relative;
+    margin: 0px 10px;
+    .btn{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border-radius: 50%;
+        background: $highlightTextColor;
+        left: 0;
+    }
+    .btnOn{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border-radius: 50%;
+        background: $highlightTextColor;
+        right: 0;
+    }
+}

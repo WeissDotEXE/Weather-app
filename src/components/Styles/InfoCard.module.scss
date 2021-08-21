@@ -1,0 +1,22 @@
+@import '../variables.scss';
+.infoCard {
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 0.3fr;
+      h1{
+          font-size: 25px;
+      }
+      #number {
+          position: absolute;
+          right: 6%;
+        background: $highlightTextColor;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .bar {
+      height: 4px;
+      background: $highlightTextColor;
+      width: 100%;
+    }
+  }

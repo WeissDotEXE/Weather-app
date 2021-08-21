@@ -1,0 +1,67 @@
+.firstCard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.firstCard img {
+  position: relative;
+  z-index: 10;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.firstCard .leftContent h1 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.firstCard .rightContent h1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4C9AE6), color-stop(120.21%, #8F00FF));
+  background: linear-gradient(180deg, #4C9AE6 0%, #8F00FF 120.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+
+.firstCard .rightContent p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.secondCard .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.3fr;
+      grid-template-columns: 1fr 0.3fr;
+}
+
+.secondCard .info h1 {
+  font-size: 25px;
+}
+
+.secondCard .info #number {
+  position: absolute;
+  right: 6%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4C9AE6), color-stop(120.21%, #8F00FF));
+  background: linear-gradient(180deg, #4C9AE6 0%, #8F00FF 120.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.secondCard .bar {
+  height: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4C9AE6), color-stop(120.21%, #8F00FF));
+  background: linear-gradient(180deg, #4C9AE6 0%, #8F00FF 120.21%);
+  width: 100%;
+}
+/*# sourceMappingURL=WeatherInfo.module.css.map */

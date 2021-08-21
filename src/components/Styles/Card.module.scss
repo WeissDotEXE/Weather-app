@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.card{
+    background: $backgroundColor;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    position: relative;
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
