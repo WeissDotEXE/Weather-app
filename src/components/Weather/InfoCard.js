@@ -37,7 +37,7 @@ const InfoCard = (props) => {
         <h1>Humidity</h1>
         <h1 id={styles.number}>{props.weather.current.humidity}%</h1>
       </div>
-      <div className={styles.bar}></div>
+      
     </Card>
   );
 };

@@ -1,0 +1,36 @@
+@import "../variables.scss";
+
+#forecastHeader {
+  font-size: 25px;
+  text-align: center;
+  font-family: $fontFamily;
+  background: $highlightTextColor;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.infoCard {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 30px 0px;
+  #date{
+      text-align: center;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    h1 {
+      font-size: 20px;
+    }
+    #number {
+      position: absolute;
+      right: 6%;
+      background: $highlightTextColor;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .bar {
+    height: 4px;
+    background: $highlightTextColor;
+    width: 100%;
+  }
+}
