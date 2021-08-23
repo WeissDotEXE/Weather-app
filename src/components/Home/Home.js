@@ -3,9 +3,10 @@ import styles from "../Styles/Home.module.scss";
 
 import WeatherInfo from "../Weather/WeatherInfo";
 import Form from "./Form";
+import Error from "../UI/Error";
 
 //import for redux to get information from it
-import { useSelector,useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Intro from "./Intro";
 
 const api = {
@@ -16,9 +17,9 @@ const api = {
 const Home = () => {
   const cityRedux = useSelector((state) => state.city);
 
+  const [error, setError] = useState(false);
   const [weather, setWeather] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-
+  const [errorMessage, setErrorMessage] = useState("");
   const submitHandler = async () => {
     try {
       // setIsLoading(true);
@@ -35,10 +36,10 @@ const Home = () => {
       );
       const weatherData = await weatherRes.json();
       console.log(weatherData);
+
       setWeather(weatherData);
     } catch (error) {
-      console.log("error here");
-      console.log(error);
+      setErrorMessage(error.message);
     }
     // setIsLoading(false);
   };
@@ -46,11 +47,20 @@ const Home = () => {
   useEffect(() => {
     submitHandler();
   }, [cityRedux]);
+
+  //function for closing the error message
+  const closeHandler = () => {
+    setError(!error);
+  };
+
   return (
     <div className={styles.home}>
       <img src="https://images.unsplash.com/photo-1611416517780-eff3a13b0359?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=904&q=80" />
       <Form submit={submitHandler} />
       <WeatherInfo weather={weather} />
+      {error && (
+        <Error errorMessage={errorMessage} closeHandler={closeHandler} />
+      )}
     </div>
   );
 };

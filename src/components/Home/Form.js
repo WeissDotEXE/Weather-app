@@ -10,11 +10,10 @@ const Form = (props) => {
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     props.submit();
     dispatch({ type: "userInput", value: query });
   };
-
 
   return (
     <form onSubmit={submitHandler} className={styles.form}>

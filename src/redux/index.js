@@ -3,6 +3,7 @@ import { createStore } from "redux";
 const initialState = {
   city: "",
   american: false,
+  error:false
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -10,6 +11,7 @@ const weatherReducer = (state = initialState, action) => {
     return {
       city: action.value,
       american: state.american,
+      error:state.error
     };
   }
 
@@ -17,7 +19,15 @@ const weatherReducer = (state = initialState, action) => {
     return {
       american: !state.american,
       city: state.city,
+      error:state.error
     };
+  }
+  if(action.type==='errorHandler'){
+    return{
+      american:state.american,
+      city:state.city,
+      error: !state.error
+    }
   }
   return state;
 };
