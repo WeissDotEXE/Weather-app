@@ -3,6 +3,7 @@ import styles from "../Styles/ForecastCard.module.scss";
 import Card from "../UI/Card";
 
 import { useSelector } from "react-redux";
+import Hourly from "./Hourly";
 
 const ForecastCard = (props) => {
   const americanUnit = useSelector((state) => state.american);
@@ -29,6 +30,7 @@ const ForecastCard = (props) => {
           <h1>Max Wind Speed</h1>
           <h1 id={styles.number}>{americanUnit ? weather.day.maxwind_mph+" Mph" :weather.day.maxwind_kph+' Kph'}</h1>
         </div>
+        <Hourly weather={weather} unit={americanUnit}/>
       </Card>
     );
   });

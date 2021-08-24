@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+#hourHeader{
+    text-align: center;
+}
+.test {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.scrollHour {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  img {
+    position: relative;
+    z-index: 2;
+    filter: brightness(100%);
+  }
+}

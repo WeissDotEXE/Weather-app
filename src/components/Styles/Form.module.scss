@@ -20,7 +20,7 @@
     font-family: $fontFamily;
     padding: 13px;
     border-radius: 10px;
-    width: 69%;
+    width: 70%;
     border: transparent;
     box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.5);
     font-size: 20px;
@@ -31,15 +31,19 @@
     box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.5);
   }
   button {
+    transition: 0.4s;
       margin:30px 0px 30px 0px;
     font-size: 30px;
     font-family: $fontFamily;
     border-radius: 10px;
     border: none;
     background: $highlightTextColor;
-    padding: 10px 30px 10px 30px;
-    width: 75%;
+    width: 50%;
     color: white;
+  }
+  button:hover{
+    transition: 0.4s;
+    width: 72%;
   }
 }
 .formCompleted{

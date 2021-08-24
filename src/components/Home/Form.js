@@ -3,6 +3,7 @@ import styles from "../Styles/Form.module.scss";
 
 //import from redux(dispatch fro changing city name globally)
 import { useDispatch } from "react-redux";
+import Button from "../UI/Button";
 
 const Form = (props) => {
   const [query, setQuery] = useState("");
@@ -23,7 +24,7 @@ const Form = (props) => {
         onChange={(e) => setQuery(e.target.value)}
         value={query}
       />
-      <button type="submit">Search</button>
+      <Button id={styles.submitBtn} type='submit'>Search</Button>
     </form>
   );
 };

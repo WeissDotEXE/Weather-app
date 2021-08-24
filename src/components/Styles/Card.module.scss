@@ -11,3 +11,15 @@
         height: 60px;
     }
 }
+
+@media only screen and (min-width:1000px){
+    .card{
+        position: relative;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+}
